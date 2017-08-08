@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { MainComponent } from './main/main.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { DashboardProductComponent } from './dashboard-product/dashboard-product.component';
-import { ProductOverviewComponent } from './dashboard-product/overview/overview.component';
-import { ProductStatsComponent } from './dashboard-product/stats/stats.component';
-import { ProductFeaturesComponent } from './dashboard-product/features/features.component';
-import { FeaturesFormComponent } from './dashboard-product/features/form/form.component';
-import { LogsComponent } from './logs/logs.component';
-import { DetailComponent } from './detail/detail.component';
-import { LoginComponent } from './login/login.component';
-import { FormComponent } from './form/form.component';
+import { MainComponent } from './components/main/main.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DashboardProductComponent } from './components/dashboard-product/dashboard-product.component';
+import { ProductOverviewComponent } from './components/dashboard-product/overview/overview.component';
+import { ProductStatsComponent } from './components/dashboard-product/stats/stats.component';
+import { ProductFeaturesComponent } from './components/dashboard-product/features/features.component';
+import { FeaturesFormComponent } from './components/dashboard-product/features/form/form.component';
+import { LogsComponent } from './components/logs/logs.component';
+import { DetailComponent } from './components/detail/detail.component';
+import { LoginComponent } from './components/login/login.component';
+import { FormComponent } from './components/form/form.component';
 
 const routes: Routes = [
     {
@@ -73,14 +73,20 @@ const routes: Routes = [
                 path: 'form',
                 component: FormComponent
             },
-            { path: '', loadChildren: './users/users.module#UsersModule' },
+            { path: '', loadChildren: './features/users/users.module#UsersModule' },
+            { path: '', loadChildren: './features/credit/credit.module#CreditModule' },
         ],
     },
 ];
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(routes, { useHash: true }),
+        RouterModule.forRoot(
+          routes, {
+            useHash: true,
+            // enableTracing: true // <-- debugging purposes only
+         },
+        ),
     ],
     exports: [
         RouterModule,

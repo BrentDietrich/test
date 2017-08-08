@@ -5,6 +5,7 @@
 /deploy
 /tmp
 /mock-api/.tmp
+.cache
 
 # dependencies
 /node_modules

@@ -1,59 +1,67 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Title }     from '@angular/platform-browser';
-
+import { single, multi, multi2 } from './data';
 import { TdLoadingService, TdDigitsPipe } from '@covalent/core';
 
-import { UserService, IUser } from '../users';
+import { UserService, IUser } from '../../../features/users';
 
-import { ItemsService, ProductsService, AlertsService } from '../../services';
-
-import { multi } from './data';
+import { ItemsService } from '../../../../services';
 
 @Component({
-  selector: 'qs-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss'],
-  viewProviders: [ ItemsService, ProductsService, AlertsService ],
+  selector: 'qs-product-overview',
+  templateUrl: './overview.component.html',
+  styleUrls: ['./overview.component.scss'],
+  viewProviders: [ ItemsService ],
 })
-export class DashboardComponent implements OnInit {
+export class ProductOverviewComponent implements OnInit {
 
   items: Object[];
   users: IUser[];
-  products: Object[];
-  alerts: Object[];
 
   // Chart
   single: any[];
   multi: any[];
+  multi2: any[];
 
-  view: any[] = [700, 400];
-
-  // options
+  // Generic Chart options
   showXAxis: boolean = true;
   showYAxis: boolean = true;
-  gradient: boolean = false;
+  gradient: boolean = true;
+  autoScale: boolean = true;
   showLegend: boolean = false;
-  showXAxisLabel: boolean = true;
-  xAxisLabel: string = '';
-  showYAxisLabel: boolean = true;
-  yAxisLabel: string = 'Sales';
+  showXAxisLabel: boolean = false;
+  showYAxisLabel: boolean = false;
+  xAxisLabel: string = 'X Axis';
+  yAxisLabel: string = 'Y Axis';
 
-  colorScheme: any = {
-    domain: ['#1565C0', '#2196F3', '#81D4FA', '#FF9800', '#EF6C00'],
+  orangeColorScheme: any = {
+    domain: [
+      '#E64A19', '#F57C00', '#FFA726', '#FFB74D', '#FFCC80',
+    ],
   };
 
-  // line, area
-  autoScale: boolean = true;
+  blueColorScheme: any = {
+    domain: [
+      '#01579B', '#00B0FF', '#80D8FF', '#E1F5FE',
+    ],
+  };
 
   constructor(private _titleService: Title,
               private _itemsService: ItemsService,
               private _userService: UserService,
-              private _alertsService: AlertsService,
-              private _productsService: ProductsService,
               private _loadingService: TdLoadingService) {
-                // Chart
+                // Chart Single
+                Object.assign(this, {single});
+                // Chart Multi
                 this.multi = multi.map((group: any) => {
+                  group.series = group.series.map((dataItem: any) => {
+                    dataItem.name = new Date(dataItem.name);
+                    return dataItem;
+                  });
+                  return group;
+                });
+                // Chart Multi2
+                this.multi2 = multi2.map((group: any) => {
                   group.series = group.series.map((dataItem: any) => {
                     dataItem.name = new Date(dataItem.name);
                     return dataItem;
@@ -63,58 +71,37 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._titleService.setTitle( 'Covalent Quickstart' );
+    this._titleService.setTitle( 'Product Name' );
+
     this._loadingService.register('items.load');
     this._itemsService.query().subscribe((items: Object[]) => {
       this.items = items;
       setTimeout(() => {
         this._loadingService.resolve('items.load');
-      }, 750);
+      }, 2000);
     }, (error: Error) => {
       this._itemsService.staticQuery().subscribe((items: Object[]) => {
         this.items = items;
         setTimeout(() => {
           this._loadingService.resolve('items.load');
-        }, 750);
+        }, 2000);
       });
-    });
-    this._loadingService.register('alerts.load');
-    this._alertsService.query().subscribe((alerts: Object[]) => {
-      this.alerts = alerts;
-      setTimeout(() => {
-        this._loadingService.resolve('alerts.load');
-      }, 750);
-    });
-    this._loadingService.register('products.load');
-    this._productsService.query().subscribe((products: Object[]) => {
-      this.products = products;
-      setTimeout(() => {
-        this._loadingService.resolve('products.load');
-      }, 750);
-    });
-    this._loadingService.register('favorites.load');
-    this._productsService.query().subscribe((products: Object[]) => {
-      this.products = products;
-      setTimeout(() => {
-        this._loadingService.resolve('favorites.load');
-      }, 750);
     });
     this._loadingService.register('users.load');
     this._userService.query().subscribe((users: IUser[]) => {
       this.users = users;
       setTimeout(() => {
         this._loadingService.resolve('users.load');
-      }, 750);
+      }, 2000);
     }, (error: Error) => {
       this._userService.staticQuery().subscribe((users: IUser[]) => {
         this.users = users;
         setTimeout(() => {
           this._loadingService.resolve('users.load');
-        }, 750);
+        }, 2000);
       });
     });
   }
-
   // ngx transform using covalent digits pipe
   axisDigits(val: any): any {
     return new TdDigitsPipe().transform(val);

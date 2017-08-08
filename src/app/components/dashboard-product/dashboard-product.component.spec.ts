@@ -6,10 +6,11 @@ import {
 } from '@angular/core/testing';
 import {APP_BASE_HREF} from '@angular/common';
 import { RouterTestingModule } from '@angular/router/testing';
-import { SharedModule } from '../shared/shared.module';
 import { TdMediaService } from '@covalent/core';
 import { DashboardProductComponent } from './dashboard-product.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
+import { SharedModule } from '../../shared/shared.module';
 
 describe('Component: DashboardProduct', () => {
 

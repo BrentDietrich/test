@@ -17,7 +17,8 @@
     "start-api": "cd mock-api && covalent-data &",
     "stop-api": "pkill covalent-data",
     "webdriver-update": "bash ./node_modules/.bin/webdriver-manager update",
-    "test": "ng test --code-coverage --single-run",
+    "single-test": "ng test --code-coverage --single-run",
+    "test": "ng test --code-coverage",
     "ghpages-deploy": "ng build --base-href /covalent-quickstart/ --aot -prod --sourcemap=false && bash scripts/ghpages-deploy"
   },
   "engines": {
@@ -53,6 +54,11 @@
     "@covalent/highlight": "1.0.0-beta.5",
     "@covalent/http": "1.0.0-beta.5",
     "@covalent/markdown": "1.0.0-beta.5",
+    "@ngrx/db": "^2.0.2",
+    "@ngrx/effects": "^4.0.2",
+    "@ngrx/router-store": "^4.0.2",
+    "@ngrx/store": "^4.0.2",
+    "@ngrx/store-devtools": "^4.0.0",
     "@swimlane/ngx-charts": "^5.3.0",
     "core-js": "^2.4.1",
     "d3": "^4.9.0",

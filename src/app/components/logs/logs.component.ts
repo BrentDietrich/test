@@ -3,7 +3,7 @@ import { Title }     from '@angular/platform-browser';
 
 import { TdLoadingService, TdMediaService } from '@covalent/core';
 
-import { ItemsService, ProductsService } from '../../services';
+import { ItemsService, ProductsService } from '../../../services';
 
 @Component({
   selector: 'qs-logs',
