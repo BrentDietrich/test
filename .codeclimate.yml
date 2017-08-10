@@ -11,8 +11,13 @@ engines:
     enabled: true
   fixme:
     enabled: true
+  nodesecurity:
+    enabled: true
+  scss-lint:
+    enabled: true
 ratings:
   paths:
+  - "**.scss"
   - "**.css"
   - "**.inc"
   - "**.js"
@@ -28,3 +33,5 @@ exclude_paths:
 - typings
 - angular-cli.json
 - karma.conf.js
+- LICENSE
+- mock-api
