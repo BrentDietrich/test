@@ -1,4 +1,5 @@
 #!/bin/bash
+# NOT IN USE
 echo 'Replace api endpoint with heroku'
 
 cat <<'EOF' >> api.config.ts
