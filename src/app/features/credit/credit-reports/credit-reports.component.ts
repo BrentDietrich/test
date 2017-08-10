@@ -27,6 +27,12 @@ export class CreditReportsComponent implements AfterViewInit, OnInit {
   }
 
   ngOnInit(): void {}
-  ngAfterViewInit(): void {}
+  ngAfterViewInit(): void {
+    // broadcast to all listener observables when loading the page
+    this.media.broadcast();
+    // force a new change detection cycle since change detections
+    // have finished when `ngAfterViewInit` is executed
+    this._changeDetectorRef.detectChanges();
+  }
 
 }

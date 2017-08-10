@@ -12,6 +12,7 @@ import { CreditInquiryComponent } from './credit-inquiry/credit-inquiry.componen
 import { CreditReportsComponent } from './credit-reports/credit-reports.component';
 import { reducers } from './reducers';
 import { creditRoutes } from './credit-routes';
+import { CreditSettingsComponent } from './credit-settings/credit-settings.component';
 
 @NgModule({
   imports: [
@@ -33,7 +34,8 @@ import { creditRoutes } from './credit-routes';
   ],
   declarations: [
     CreditInquiryComponent,
-    CreditReportsComponent
+    CreditReportsComponent,
+    CreditSettingsComponent
   ]
 })
 export class CreditModule { }
