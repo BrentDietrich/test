@@ -1,13 +1,7 @@
 {
-  "name": "covalent-quickstart",
+  "name": "test-app",
   "version": "1.0.0",
-  "private": true,
-  "description": "Quickstart App with @covalent packages",
-  "keywords": [
-    "angular",
-    "components",
-    "reusable"
-  ],
+  "description": "simple test",
   "scripts": {
     "start": "ng serve",
     "e2e": "ng e2e",
@@ -25,17 +19,9 @@
     "node": ">4.4 < 7",
     "npm": ">3"
   },
-  "repository": "https://github.com/teradata/covalent-quickstart.git",
+  "repository": "https://github.com/BrentDietrich/test.git",
   "license": "MIT",
-  "author": "Teradata UX",
-  "contributors": [
-    "Kyle Ledbetter <kyle.ledbetter@teradata.com>",
-    "Richa Vyas <richa.vyas@teradata.com>",
-    "Ed Morales <eduardo.morales@teradata.com>",
-    "Jason Weaver <jason.weaver@teradata.com>",
-    "Jeremy Smartt <jeremy.smartt@teradata.com>",
-    "Ilsun Park <ilsun.park@teradata.com>"
-  ],
+  "author": "BrentDietrich <bmddev@gmail.com>",
   "dependencies": {
     "@angular/animations": "^4.2.0",
     "@angular/common": "^4.2.0",
