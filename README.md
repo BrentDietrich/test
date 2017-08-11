@@ -1,4 +1,5 @@
 [![Travis](https://img.shields.io/travis/BrentDietrich/test.svg?style=flat-square)](https://travis-ci.org/BrentDietrich/test)
+[![Coverage Status](https://img.shields.io/coveralls/BrentDietrich/test/master.svg?style=flat-square)](https://coveralls.io/github/BrentDietrich/test)
 [![Code Climate](https://img.shields.io/codeclimate/github/kabisaict/flow.svg?style=flat-square)](https://codeclimate.com/github/BrentDietrich/test)
 
 ## [Boilerplate / upstream](https://github.com/Teradata/covalent-quickstart)
