@@ -1,5 +1,7 @@
 [![Travis](https://img.shields.io/travis/BrentDietrich/test.svg?style=flat-square)](https://travis-ci.org/BrentDietrich/test)
 [![Dependencies](https://david-dm.org/BrentDietrich/test.svg)](https://david-dm.org/BrentDietrich/test)
+[![peerDependencies Status](https://david-dm.org/BrentDietrich/test/peer-status.svg)](https://david-dm.org/BrentDietrich/test?type=peer)
+[![DevDependencies](https://david-dm.org/BrentDietrich/test/dev-status.svg)](https://david-dm.org/BrentDietrich/test#info=devDependencies&view=table)
 [![Code Climate](https://img.shields.io/codeclimate/github/kabisaict/flow.svg?style=flat-square)](https://codeclimate.com/github/BrentDietrich/test)
 [![Coverage Status](https://img.shields.io/coveralls/BrentDietrich/test/master.svg?style=flat-square&branch=master)](https://coveralls.io/github/BrentDietrich/test/master)
 
