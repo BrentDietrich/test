@@ -1,4 +1,5 @@
-[![Code Climate](https://codeclimate.com/github/BrentDietrich/test/badges/gpa.svg)](https://codeclimate.com/github/BrentDietrich/test)
+[![Travis](https://img.shields.io/travis/BrentDietrich/test.svg?style=flat-square)](https://travis-ci.org/BrentDietrich/test)
+[![Code Climate](https://img.shields.io/codeclimate/github/kabisaict/flow.svg?style=flat-square)](https://codeclimate.com/github/BrentDietrich/test)
 
 ## [Boilerplate / upstream](https://github.com/Teradata/covalent-quickstart)
 
