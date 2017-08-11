@@ -26,3 +26,7 @@ Quickstart App with @covalent packages
 * Install Node packages `npm i`
 * Update Webdriver `webdriver-manager update` and `./node_modules/.bin/webdriver-manager update`
 * Run local build `ng serve`
+
+
+## Todos
+- codeclimate's nodesecurity doesn't work with yarn.lock file right now, there working on it. See (https://github.com/nodesecurity/nsp/pull/142)
