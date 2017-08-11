@@ -1,6 +1,8 @@
 [![Travis](https://img.shields.io/travis/BrentDietrich/test.svg?style=flat-square)](https://travis-ci.org/BrentDietrich/test)
-[![Coverage Status](https://img.shields.io/coveralls/BrentDietrich/test/master.svg?style=flat-square)](https://coveralls.io/github/BrentDietrich/test)
+[![Dependencies](https://david-dm.org/BrentDietrich/test.svg)](https://david-dm.org/BrentDietrich/test)
 [![Code Climate](https://img.shields.io/codeclimate/github/kabisaict/flow.svg?style=flat-square)](https://codeclimate.com/github/BrentDietrich/test)
+[![Coverage Status](https://img.shields.io/coveralls/BrentDietrich/test/master.svg?style=flat-square&branch=master)](https://coveralls.io/github/BrentDietrich/test/master)
+
 
 ## [Boilerplate / upstream](https://github.com/Teradata/covalent-quickstart)
 
@@ -29,4 +31,5 @@ Quickstart App with @covalent packages
 
 
 ## Todos
-- codeclimate's nodesecurity doesn't work with yarn.lock file right now, there working on it. See (https://github.com/nodesecurity/nsp/pull/142)
+- dependecies
+  - [vulnerabilities] codeclimate's nodesecurity doesn't work with yarn.lock file right now, there working on it. See (https://github.com/nodesecurity/nsp/pull/142)
