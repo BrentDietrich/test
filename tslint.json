@@ -2,7 +2,7 @@
   "rulesDirectory": ["node_modules/codelyzer"],
   "rules": {
     "max-line-length": [true, 120],
-    "no-inferrable-types": true,
+    "no-inferrable-types": false,
     "class-name": true,
     "comment-format": [
       true,
@@ -50,7 +50,8 @@
       true,
       "ban-keywords",
       "check-format",
-      "allow-trailing-underscore"
+      "allow-trailing-underscore",
+      "allow-leading-underscore"
     ],
     "whitespace": [
       true,
@@ -60,8 +61,8 @@
       "check-separator",
       "check-type"
     ],
-    "interface-name": true,
+    "interface-name": false,
     "no-unreachable": true,
-    "member-access": true
+    "member-access": false
   }
 }
