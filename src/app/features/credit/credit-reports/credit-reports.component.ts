@@ -16,7 +16,8 @@ import 'rxjs/add/operator/toPromise';
 })
 export class CreditReportsComponent implements AfterViewInit, OnInit {
 
-  creditReports: Inquiry[];
+  reports: Inquiry[];
+  filteredReports: Inquiry[];
 
   constructor(private _titleService: Title,
               private _loadingService: TdLoadingService,
@@ -27,6 +28,7 @@ export class CreditReportsComponent implements AfterViewInit, OnInit {
   }
 
   ngOnInit(): void {}
+  
   ngAfterViewInit(): void {
     // broadcast to all listener observables when loading the page
     this.media.broadcast();
@@ -35,4 +37,9 @@ export class CreditReportsComponent implements AfterViewInit, OnInit {
     this._changeDetectorRef.detectChanges();
   }
 
+  filterReports(displayName: string = ''): void {
+    // this.filteredReports = this.reports.filter((report: Inquiry) => {
+    //   return report.displayName.toLowerCase().indexOf(displayName.toLowerCase()) > -1;
+    // });
+  }
 }

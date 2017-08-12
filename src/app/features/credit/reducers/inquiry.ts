@@ -5,13 +5,13 @@ import * as inquiry from '../actions/inquiry';
 export interface State {
   id: string;
   checking: boolean;
-  report: any;
+  data: any;
 }
 
 export const initialState: State = {
   id: '',
   checking: false,
-  report: null
+  data: null
 };
 
 export function reducer(
@@ -20,7 +20,7 @@ export function reducer(
 ): State {
   switch (action.type) {
 
-    case inquiry.CHECK: {
+    case inquiry.REQUEST: {
       return Object.assign({}, state, {
         checking: true,
       });
