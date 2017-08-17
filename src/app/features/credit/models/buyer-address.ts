@@ -1,10 +1,6 @@
-export interface BuyerAddress {
-  id: string;
-  type: string; // own or rent
-  zipCode: number;
-  city: string;
-  county: string;
-  state: string;
+import { Address } from './../../../shared/models';
+export interface BuyerAddress extends Address {
+  ownOrRent: string; // own or rent
   yearsAtAddress: number;
   monthsAtAddress: number;
 }

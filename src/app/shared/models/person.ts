@@ -9,7 +9,7 @@ export interface Person {
   suffix?: string;
   birthDate?: Date;
   email?: string;
-  phone1?: string;
+  phone?: string;
   phone2?: string;
   cellPhone?: string;
   faxNumber?: string;

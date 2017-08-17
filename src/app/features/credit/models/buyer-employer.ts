@@ -1,6 +1,6 @@
 export interface BuyerEmployer {
   name: string;
-  occupation: string;
+  occupationTitle: string;
   phone: string;
   monthlyIncome: number;
   yearsEmployed: number;

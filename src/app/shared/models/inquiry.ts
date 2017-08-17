@@ -1,5 +1,5 @@
-import { Buyer } from './buyer';
+// import { Buyer } from './buyer';
 
-export interface Inquiry extends Buyer {
+// export interface Inquiry extends Buyer {
 
-}
+// }
