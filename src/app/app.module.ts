@@ -56,7 +56,7 @@ export function getAPI(): string {
     StoreModule.forRoot(reducers, { metaReducers }),
     StoreRouterConnectingModule,
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    // EffectsModule.forRoot([]),
+    EffectsModule.forRoot([]),
     DBModule.provideDB(schema),
     /** Material mods must go last */
     MaterialLoadModule,

@@ -2,11 +2,10 @@ import { reducer } from './inquiry';
 import * as fromInquiry from './inquiry';
 import {
   RequestAction,
-  RequestCompleteAction,
   RequestSuccessAction,
-  RequestFailedAction,
+  RequestFailAction,
 } from '../actions/inquiry';
-import { Inquiry } from '../models/inquiry';
+import { Report } from '../models/report';
 // import { LoadSuccessAction } from '../actions/collection';
 
 describe('InquiryReducer', () => {

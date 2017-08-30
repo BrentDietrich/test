@@ -1,5 +1,5 @@
 import { createSelector } from '@ngrx/store';
-import { Inquiry } from '../models/inquiry';
+import { Report } from '../models/report';
 import * as inquiry from '../actions/inquiry';
 
 export interface State {

@@ -1,18 +1,12 @@
 import { Action } from '@ngrx/store';
-import { Inquiry } from '../models/inquiry';
+import { Report } from '../models/report';
 
-export const REQUEST = '[Inquiry] Request';
-export const REQUEST_COMPLETE = '[Inquiry] Request Complete';
-export const REQUEST_SUCCESS = '[Inquiry] Request Success';
-export const REQUEST_FAILED = '[Inquiry] Request Failed';
+export const REQUEST =              '[Inquiry] Request';
+export const REQUEST_SUCCESS =      '[Inquiry] Request Success';
+export const REQUEST_FAIL =         '[Inquiry] Request Fail';
 
 export class RequestAction implements Action {
   readonly type = REQUEST;
-  constructor(public payload: string) {}
-}
-
-export class RequestCompleteAction implements Action {
-  readonly type = REQUEST_COMPLETE;
   constructor(public payload: string) {}
 }
 
@@ -21,13 +15,12 @@ export class RequestSuccessAction implements Action {
   constructor(public payload: string) {}
 }
 
-export class RequestFailedAction implements Action {
-  readonly type = REQUEST_FAILED;
+export class RequestFailAction implements Action {
+  readonly type = REQUEST_FAIL;
   constructor(public payload: string) {}
 }
 
 export type Actions =
   | RequestAction
-  | RequestCompleteAction
   | RequestSuccessAction
-  | RequestFailedAction;
+  | RequestFailAction;

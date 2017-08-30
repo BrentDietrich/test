@@ -5,6 +5,7 @@ import {
   ActionReducer,
 } from '@ngrx/store';
 import { environment } from '../../environments/environment';
+import * as fromRouter from '@ngrx/router-store';
 
 /**
  * Every reducer module's default export is the reducer function itself. In
@@ -14,13 +15,13 @@ import { environment } from '../../environments/environment';
  */
 
 // import * as fromLayout from '../core/reducers/layout';
-
 /**
  * As mentioned, we treat each reducer like a table in a database. This means
  * our top level state interface is just a map of keys to inner state types.
  */
 export interface State {
   // layout: fromLayout.State;
+  routerReducer: fromRouter.RouterReducerState;
 }
 
 /**
@@ -30,13 +31,14 @@ export interface State {
  */
 export const reducers: ActionReducerMap<State> = {
   // layout: fromLayout.reducer,
+  routerReducer: fromRouter.routerReducer,
 };
 
 // console.log all actions
 export function logger(reducer: ActionReducer<State>): ActionReducer<any, any> {
   return function(state: State, action: any): State {
-    console.log('state', state);
-    console.log('action', action);
+    // console.log('state', state);
+    // console.log('action', action);
 
     return reducer(state, action);
   };

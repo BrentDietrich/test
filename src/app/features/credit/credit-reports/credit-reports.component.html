@@ -11,7 +11,7 @@
                         [mode]="(media.registerQuery('gt-sm') | async) ? 'side' : 'push'"
                         [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '257px' : '100%'">
     <md-toolbar td-sidenav-content>
-      <span>Reports</span>
+      <span>Credit Reports</span>
     </md-toolbar>
     <md-nav-list td-sidenav-content (click)="!media.query('gt-sm') && manageList.close()">
       <a md-list-item>
@@ -35,12 +35,12 @@
       <button md-icon-button><md-icon class="md-24">settings</md-icon></button>
       <button md-icon-button><md-icon class="md-24">more_vert</md-icon></button>
     </div>
-    <md-card class="push-bottom-xxl" tdMediaToggle="gt-xs" [mediaClasses]="['push']">
+    <md-card class="push-bottom-xxl">
       <td-search-box class="push-left push-right" placeholder="search" [alwaysVisible]="true" (searchDebounce)="filterReports($event)"></td-search-box>
       <md-divider></md-divider>
-      <ng-template tdLoading="reports">
+      <ng-template tdLoading="reports$ | async">
         <md-list class="will-load">
-          <div class="md-padding" *ngIf="filteredReports?.length === 0" layout="row" layout-align="center center">
+          <div class="md-padding" *ngIf="(reports$ | async)?.length === 0" layout="row" layout-align="center center">
             <h3>No reports to display.</h3>
           </div>
           <ng-template let-report let-last="last" ngFor [ngForOf]="filteredReports">
