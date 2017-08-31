@@ -3,28 +3,30 @@ import { createSelector, createFeatureSelector } from '@ngrx/store';
 import * as fromRoot from '../../../reducers';
 import * as fromInquiry from './inquiry';
 import * as fromReports from './reports';
-// import * as fromReports from './reducer';
+import * as fromCollection from './collection';
 
-export interface CreditState {
+export interface CreditReportsState {
   inquiry: fromInquiry.State;
   reports: fromReports.State;
+  collection: fromCollection.State;
 }
 
 export interface State extends fromRoot.State {
-  'credit': CreditState;
+  'creditReports': CreditReportsState;
 }
 
 export const reducers = {
   inquiry: fromInquiry.reducer,
   reports: fromReports.reducer,
+  collection: fromCollection.reducer,
 };
 
-export const getReportsState = createFeatureSelector<CreditState>('credit');
+export const getReportsState = createFeatureSelector<CreditReportsState>('creditReports');
 
 
 export const getReportEntitiesState = createSelector(
   getReportsState,
-  (state: CreditState) => state.reports
+  (state: CreditReportsState) => state.reports
 );
 export const getReportEntities = createSelector(
   getReportEntitiesState,

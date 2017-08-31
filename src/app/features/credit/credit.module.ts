@@ -14,6 +14,7 @@ import { CreditReportsComponent } from './credit-reports/credit-reports.componen
 import { creditRoutes } from './credit-routes';
 import { CreditSettingsComponent } from './credit-settings/credit-settings.component';
 import { reducers } from './reducers';
+import { CollectionEffects } from './effects/collection';
 import { ReportsEffects } from './effects/reports';
 
 @NgModule({
@@ -30,8 +31,8 @@ import { ReportsEffects } from './effects/reports';
     CovalentSearchModule,
     CovalentCommonModule,
     /** custom */
-    StoreModule.forFeature('credit', reducers ),
-    EffectsModule.forFeature([ReportsEffects]),
+    StoreModule.forFeature('creditReports', reducers ),
+    EffectsModule.forFeature([CollectionEffects]),
     creditRoutes,
     MaterialLoadModule,
   ],

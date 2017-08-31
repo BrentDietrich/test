@@ -7,7 +7,7 @@ import { MdSnackBar } from '@angular/material';
 import { TdLoadingService, TdDialogService, TdMediaService } from '@covalent/core';
 
 import * as fromReports from '../reducers';
-import * as Reports from '../actions/reports';
+import * as Collection from '../actions/collection';
 import { Report } from '../models/report';
 // import { UserService, IUser } from './services/user.service';
 
@@ -30,7 +30,7 @@ export class CreditReportsComponent implements OnInit, AfterViewInit {
   ) {}
 
   ngOnInit(): void {
-    this._store.dispatch(new Reports.LoadAction());
+    this._store.dispatch(new Collection.LoadAction());
   }
   
   ngAfterViewInit(): void {

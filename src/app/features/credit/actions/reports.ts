@@ -1,22 +1,25 @@
 import { Action } from '@ngrx/store';
 import { Report } from '../models/report';
 
-export const LOAD =             '[Reports] Load';
-export const LOAD_SUCCESS =     '[Reports] Load Success';
-export const LOAD_FAIL =        '[Reports] Load Fail';
+export const LOAD_SELECTED =        '[Report] Load Selected';
+export const LOAD_SUCCESS =         '[Report] Load Success';
+export const LOAD_FAIL =            '[Report] Load Fail';
 
 /**
- * Load Reports Actions
+ * Reports Actions
  */
-export class LoadAction implements Action {
-  readonly type = LOAD;
+
+export class LoadSelectedAction implements Action {
+  readonly type = LOAD_SELECTED;
+
+  constructor(public payload: Report) {}
 }
 
 export class LoadSuccessAction implements Action {
   readonly type = LOAD_SUCCESS;
 
-  // constructor(public payload: Report[]) {}
-  constructor(public payload: any) {}
+  constructor(public payload: Report[]) {}
+  // constructor(public payload: any) {}
 }
 
 export class LoadFailAction implements Action {
@@ -26,6 +29,9 @@ export class LoadFailAction implements Action {
 }
 
 export type Actions = 
-  | LoadAction
+  | LoadSelectedAction
   | LoadSuccessAction
   | LoadFailAction;
+
+
+// TODO: change reports.ts -> report.ts

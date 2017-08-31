@@ -13,6 +13,7 @@ import { CreditReportsComponent } from './credit-reports.component';
 import * as fromRoot from '../../../reducers/index';
 import * as fromReports from '../reducers';
 import * as Reports from '../actions/reports';
+import * as Collection from '../actions/collection';
 
 describe('CreditReportsComponent', () => {
   let component: CreditReportsComponent;
@@ -32,7 +33,7 @@ describe('CreditReportsComponent', () => {
         /** Import store module */
         StoreModule.forRoot({
           ...fromRoot.reducers,
-          'credit': combineReducers(fromReports.reducers)
+          'creditReports': combineReducers(fromReports.reducers)
         }),
       ],
       declarations: [ CreditReportsComponent ],
@@ -75,15 +76,15 @@ describe('CreditReportsComponent', () => {
     });
   });
 
-  it('should dispatch an action to load reports when created:', () => {
-    const action = new Reports.LoadAction();
+  it('should dispatch an action to load all reports when created:', () => {
+    const action = new Collection.LoadAction();
 
     expect(store.dispatch).toHaveBeenCalledWith(action);
   });
 
   it('should display a list of reports after they have been loaded:', () => {
     const items = [];
-    const action = new Reports.LoadSuccessAction(items);
+    const action = new Collection.LoadSuccessAction(items);
 
     store.dispatch(action);
     component.reports$.subscribe(data => {

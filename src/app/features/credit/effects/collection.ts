@@ -11,11 +11,11 @@ import { Observable } from 'rxjs/Observable';
 import { defer } from 'rxjs/observable/defer';
 import { of } from 'rxjs/observable/of';
 
-import * as reportsAction from '../actions/reports';
+import * as collectionAction from '../actions/collection';
 import { Report } from '../models/report';
 
 @Injectable()
-export class ReportsEffects {
+export class CollectionEffects {
   constructor(private actions$: Actions) {}
   /**
    * This effect does not yield any actions back to the store. Set
@@ -32,13 +32,13 @@ export class ReportsEffects {
     // return this.db.open('books_app');
   });
 
-  // @Effect() loadReports$: Observable<Action> = this.actions$
-  //   .ofType(reportsAction.LOAD_ALL)
-  //   .map(() => {
-  //     // console.log('test');
-  //     let dev: Report[] = [];
-  //     return new reportsAction.LoadSuccessAction(dev);
-  //   });
+  @Effect() loadReports$: Observable<Action> = this.actions$
+    .ofType(collectionAction.LOAD)
+    .map(() => {
+      // console.log('test');
+      let dev: Report[] = [];
+      return new collectionAction.LoadSuccessAction(dev);
+    });
 
               // private db: Database) {}
 }

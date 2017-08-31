@@ -4,16 +4,16 @@ import * as reportsAction from '../actions/reports';
 import { Report } from '../models/report';
 
 export interface State {
-  loaded: boolean;
-  loading: boolean;
+  // loaded: boolean;
+  // loading: boolean;
   entities: { [id: string]: Report };
   ids: string[];
   selectedReportId: string;
 }
 
-const initialState: State = {
-  loaded: false,
-  loading: false,
+export const initialState: State = {
+  // loaded: false,
+  // loading: false,
   entities: {},
   ids: [],
   selectedReportId: null,
@@ -25,28 +25,23 @@ export function reducer(
 ): State {
   switch (action.type) {
 
-    case reportsAction.LOAD: {
-      return Object.assign({}, state, {
-        loading: true,
-      });
-    }
-      
+
     case reportsAction.LOAD_SUCCESS: {
       const reports = action.payload;
+      // console.log('reports', reports);
       const newReports = reports.filter(report => !state.entities[report.id]);
-
       const newReportIds = newReports.map(report => report.id);
       const newReportEntities = newReports.reduce(
         (entities: { [id: string]: Report }, report: Report) => {
           return Object.assign(entities, {
-            [report.reportId]: report,
+            [report.id]: report,
           });
         },
         {}
       );
       return {
-        loaded: true,
-        loading: false,
+        // loaded: true,
+        // loading: false,
         ids: [...state.ids, ...newReportIds],
         entities: Object.assign({}, state.entities, newReportEntities),
         selectedReportId: state.selectedReportId,
