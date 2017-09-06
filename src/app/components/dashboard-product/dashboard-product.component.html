@@ -1,6 +1,7 @@
-<td-layout-nav logo="assets:covalent">
+<!--<td-layout-nav logo="assets:covalent">-->
+<td-layout-nav>
   <div td-toolbar-content layout="row" layout-align="center center" flex>
-    <span>Quickstart</span>
+    <span><strong>AutoXplorer</strong> DMS</span>
     <span flex></span>
     <a md-icon-button mdTooltip="Docs" href="https://teradata.github.io/covalent/" target="_blank"><md-icon>chrome_reader_mode</md-icon></a>
     <a md-icon-button mdTooltip="Github" href="https://github.com/teradata/covalent" target="_blank"><md-icon svgIcon="assets:github"></md-icon></a>
@@ -10,7 +11,7 @@
                         [mode]="(media.registerQuery('gt-sm') | async) ? 'side' : 'push'"
                         [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '257px' : '100%'">
     <md-toolbar td-sidenav-content>
-      <span>Product Name</span>
+      <span>Inventory</span>
     </md-toolbar>
     <md-nav-list td-sidenav-content>
       <a md-list-item
@@ -29,7 +30,7 @@
         [routerLinkActiveOptions]="{exact:true}"
         [routerLink]="['stats']">
         <md-icon md-list-icon>insert_chart</md-icon>
-        Stats
+        Inventory List
       </a>
       <a md-list-item
         md-ripple class="block relative"
@@ -38,16 +39,16 @@
         [routerLinkActiveOptions]="{exact:true}"
         [routerLink]="['features']">
         <md-icon md-list-icon>star</md-icon>
-        Features
+        New Inventory
       </a>
-      <a md-list-item (click)="!media.query('gt-sm') && manageList.close()" md-ripple class="block relative">
+      <!--<a md-list-item (click)="!media.query('gt-sm') && manageList.close()" md-ripple class="block relative">
         <md-icon md-list-icon>people</md-icon>
-        Customers
-      </a>
+        Inventory Flow
+      </a>-->
       <h3 md-subheader>Admin Menu</h3>
       <a md-list-item (click)="!media.query('gt-sm') && manageList.close()" md-ripple class="block relative">
         <md-icon md-list-icon>receipt</md-icon>
-        Log
+        History
       </a>
       <a md-list-item (click)="!media.query('gt-sm') && manageList.close()" md-ripple class="block relative">
         <md-icon md-list-icon>settings</md-icon>

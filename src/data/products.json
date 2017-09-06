@@ -1,23 +1,23 @@
 [
   {
     "item_id": "1",
-    "name": "Analyze This",
-    "description": "product description",
-    "icon": "account_balance",
+    "name": "Inventory Manager",
+    "description": "live inventory management",
+    "icon": "directions_car",
     "color": "pink-A200",
     "category" : "analytics"
   },{
     "item_id": "2",
-    "name": "Android Usage",
-    "description": "product description",
-    "icon": "android",
+    "name": "Credit Reporting",
+    "description": "run consumer reports",
+    "icon": "credit_card",
     "color": "green-700",
     "category" : "analytics"
   },{
     "item_id": "3",
-    "name": "Watch Usage",
-    "description": "product description",
-    "icon": "watch",
+    "name": "Customer Inquiries",
+    "description": "view and manage customer inquiries",
+    "icon": "people",
     "color": "purple-600",
     "category" : "analytics"
   },{

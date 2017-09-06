@@ -1,6 +1,7 @@
-<td-layout-nav logo="assets:covalent">
+<!--<td-layout-nav logo="assets:covalent">-->
+<td-layout-nav>
   <div td-toolbar-content layout="row" layout-align="center center" flex>
-    <span>Quickstart</span>
+    <span><strong>AutoXplorer</strong> DMS</span>
     <span flex></span>
     <a md-icon-button mdTooltip="Docs" href="https://teradata.github.io/covalent/" target="_blank"><md-icon>chrome_reader_mode</md-icon></a>
     <a md-icon-button mdTooltip="Github" href="https://github.com/teradata/covalent" target="_blank"><md-icon svgIcon="assets:github"></md-icon></a>
@@ -8,8 +9,8 @@
   <div layout-gt-sm="row" tdMediaToggle="gt-xs" [mediaClasses]="['push-sm']">
     <div flex-gt-sm="60">
       <md-card>
-        <md-card-title>Products Sales</md-card-title>
-        <md-card-subtitle>usage stats for our products</md-card-subtitle>
+        <md-card-title>Inventory Sales</md-card-title>
+        <md-card-subtitle>Quick sales overview</md-card-subtitle>
         <md-divider></md-divider>
         <div class="chart-height push-top push-right-sm">
           <ngx-charts-area-chart-stacked
@@ -34,7 +35,7 @@
               <div class="md-headline">{{ '2341'| digits }} <md-icon class="tc-green-500 text-sm">arrow_upward</md-icon></div>
               <md-icon class="icon tc-indigo-700">perm_contact_calendar</md-icon>
               <div layout="column">
-                <div class="md-subhead">Active Users</div>
+                <div class="md-subhead">Active Sales</div>
                 <div class="md-caption tc-grey-600">updated {{ '2016-06-17 12:59:59' | timeAgo }}</div>
               </div>
             </md-card-content>
@@ -46,7 +47,7 @@
               <div class="md-headline">{{ '72452903343' | bytes }} <md-icon class="tc-red-500 text-sm">arrow_downward</md-icon></div>
               <md-icon class="icon tc-light-blue-700">sd_storage</md-icon>
               <div layout="column">
-                <div class="md-subhead">User Disk Usage</div>
+                <div class="md-subhead">Email Storage Usage</div>
                 <div class="md-caption tc-grey-600">updated {{ '2016-07-18 11:02:59' | timeAgo }}</div>
               </div>
             </md-card-content>
@@ -67,7 +68,7 @@
       </div>
       <md-card>
         <md-card-title>Customer Activity</md-card-title>
-        <md-card-subtitle>Recent activity from select members</md-card-subtitle>
+        <md-card-subtitle>Recent activity from your customers</md-card-subtitle>
         <md-divider></md-divider>
         <md-nav-list class="will-load item-list">
           <ng-template tdLoading="items.load">
@@ -87,14 +88,14 @@
     </div>
     <div flex-gt-sm="40">
       <md-card>
-        <md-card-title>Alerts</md-card-title>
-        <md-card-subtitle>Items requiring attention</md-card-subtitle>
+        <md-card-title>Inventory Alerts</md-card-title>
+        <md-card-subtitle>Inventory actions requiring attention</md-card-subtitle>
         <md-divider></md-divider>
         <md-list class="will-load alert-list">
           <ng-template tdLoading="alerts.load">
             <ng-template let-item let-last="last" ngFor [ngForOf]="alerts">
               <md-list-item layout-align="row">
-                <md-icon md-list-avatar class="bgc-amber-800">{{item.icon}}</md-icon>
+                <md-icon md-list-avatar class="{{item.class}}">{{item.icon}}</md-icon>
                 <h3 md-line> {{item.description}} </h3>
                 <p md-line> {{item.name}} </p>
               </md-list-item>
@@ -111,7 +112,7 @@
       </md-card>
       <md-card id="dashboard-favorites-card" class="push-top">
         <md-card-title>Favorites</md-card-title>
-        <md-card-subtitle>Your favorite products</md-card-subtitle>
+        <md-card-subtitle>Your favorite services</md-card-subtitle>
         <md-divider></md-divider>
         <md-nav-list class="will-load favorite-list">
           <ng-template tdLoading="favorites.load">
@@ -136,9 +137,9 @@
   </div>
   <td-layout-footer>
     <div layout="row" layout-align="start center">
-      <span class="md-caption">Copyright &copy; 2016 Teradata. All rights reserved</span>
+      <span class="md-caption">Copyright &copy; 2017 AutoXplorer. All rights reserved</span>
       <span flex></span>
-      <md-icon class="md-icon-ux" svgIcon="assets:teradata-ux"></md-icon>
+      <!--<md-icon class="md-icon-ux" svgIcon="assets:teradata-ux"></md-icon>-->
     </div>
   </td-layout-footer>
 </td-layout-nav>

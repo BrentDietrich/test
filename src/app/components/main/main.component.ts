@@ -13,21 +13,21 @@ export class MainComponent {
       route: '/',
       icon: 'dashboard',
     }, {
-      title: 'Product Dashboard',
+      title: 'Inventory Dashboard',
       route: '/product',
-      icon: 'view_quilt',
+      icon: 'directions_car',
     }, {
-      title: 'Product Logs',
+      title: 'Customer Dashboard',
       route: '/logs',
-      icon: 'receipt',
+      icon: 'people',
+    }, {
+      title: 'Credit Dashboard',
+      route: '/credit',
+      icon: 'credit_card',
     }, {
       title: 'Manage Users',
       route: '/users',
-      icon: 'people',
-    }, {
-      title: 'Credit',
-      route: '/credit',
-      icon: 'people',
+      icon: 'verified_users',
     },
   ];
 

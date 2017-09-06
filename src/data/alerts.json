@@ -1,33 +1,31 @@
 [
   {
     "item_id": "1",
-    "name": "Sim Card",
-    "description": "sim card expiring",
-    "icon": "sim_card",
+    "name": "New Vehicle was Added",
+    "description": "2012 Toyota Tacomo ... sn# 4129-TM",
+    "icon": "thumb_up",
+    "class": "bgc-cyan-A700",
     "created" : "07/13/2016 11:05 AM"
   },{
     "item_id": "2",
-    "name": "Motherboard",
-    "description": "board heat nearing critical",
-    "icon": "developer_board",
+    "name": "Smog Check Required",
+    "description": "sn# 3409-TM requires a smog check",
+    "icon": "warning",
+    "class": "bgc-orange-800",
     "created" : "07/01/2016 03:41 PM"
   },{
     "item_id": "3",
-    "name": "RAM Usage",
-    "description": "exceeded ram capacity",
-    "icon": "memory",
+    "name": "Vehicle Churn Rate",
+    "description": "sn# 3409-TM has been in-lot for 6 months",
+    "icon": "thumb_down",
+    "class": "bgc-amber-A700",
     "created" : "06/15/2016 09:02 AM"
   },{
     "item_id": "4",
-    "name": "Wireless Signal",
-    "description": "interrupted signal strength",
-    "icon": "router",
-    "created" : "03/23/2016 11:01 PM"
-  },{
-    "item_id": "5",
-    "name": "Battery",
-    "description": "battery level unknown",
-    "icon": "battery_unknown",
+    "name": "Vehicle SOLD!",
+    "description": "sn# 3409-TM has been sold by Jose",
+    "icon": "grade",
+    "class": "bgc-green-A700",
     "created" : "12/23/2015 11:05 AM"
   }
 ]
