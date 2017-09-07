@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MESSAGE MessageType="Request" xmlns="http://www.mismo.org/residential/2009/schemas" xmlns:p2="http://www.w3.org/1999/xlink" xmlns:p3="inetapi/MISMO3_4_MCL_Extension.xsd">
+  <ABOUT_VERSIONS>
+    <ABOUT_VERSION>
+	  <AboutVersionIdentifier randomAttr="unused">Unused</AboutVersionIdentifier>
+      <DataVersionIdentifier>201703</DataVersionIdentifier>
+    </ABOUT_VERSION>
+  </ABOUT_VERSIONS>
+  <DEAL_SETS>
+    <DEAL_SET>
+      <DEALS>
+        <DEAL>	            
+          <LOANS>
+            <LOAN>
+              <LOAN_IDENTIFIERS>
+                <LOAN_IDENTIFIER>
+                  <LoanIdentifier>SmartAPI_ClientSample</LoanIdentifier>
+                </LOAN_IDENTIFIER>
+              </LOAN_IDENTIFIERS>              
+            </LOAN>
+          </LOANS>
+          <PARTIES>
+            <PARTY SequenceNumber="1" p2:label="Party1"> <!--BORROWER-->
+              <INDIVIDUAL>
+                <CONTACT_POINTS>
+                  <CONTACT_POINT SequenceNumber="1">
+                    <CONTACT_POINT_EMAIL>
+                      <ContactPointEmailValue>borrower1@example.com</ContactPointEmailValue>
+                    </CONTACT_POINT_EMAIL>
+                  </CONTACT_POINT>
+                  <CONTACT_POINT SequenceNumber="2">
+                    <CONTACT_POINT_TELEPHONE>
+                      <ContactPointTelephoneValue>7146789999</ContactPointTelephoneValue>
+                    </CONTACT_POINT_TELEPHONE>
+                    <CONTACT_POINT_DETAIL>
+                      <ContactPointRoleType>Home</ContactPointRoleType>
+                      <ContactPointRoleTypeOtherDescription></ContactPointRoleTypeOtherDescription>
+                    </CONTACT_POINT_DETAIL>
+                  </CONTACT_POINT>
+                </CONTACT_POINTS>
+                <NAME>
+                  <FirstName>First</FirstName>				  
+                  <LastName>Last</LastName>
+                  <MiddleName>M</MiddleName>
+                  <SuffixName></SuffixName>
+                </NAME>
+              </INDIVIDUAL>
+              <ROLES>
+                <ROLE>
+                  <BORROWER p2:label="Borrower1">
+                    <BORROWER_DETAIL>
+                      <BorrowerBirthDate>1964-12-12</BorrowerBirthDate>                                        
+					            <BorrowerClassificationType>Primary</BorrowerClassificationType>
+					            <DependentCount>3</DependentCount>
+                    </BORROWER_DETAIL>                    
+                    <RESIDENCES>
+                      <RESIDENCE SequenceNumber="1">
+                        <ADDRESS>
+                          <AddressLineText>300 Bristol St</AddressLineText>						  
+                          <CityName>COSTA MESA</CityName>						  
+                          <PostalCode>92626</PostalCode>
+                          <StateCode>CA</StateCode>
+                        </ADDRESS>                        
+                        <RESIDENCE_DETAIL>
+						              <BorrowerResidencyBasisType>Own</BorrowerResidencyBasisType>
+                          <BorrowerResidencyDurationMonthsCount>3</BorrowerResidencyDurationMonthsCount>
+                          <BorrowerResidencyDurationYearsCount>15</BorrowerResidencyDurationYearsCount>
+                          <BorrowerResidencyType>Current</BorrowerResidencyType>
+                        </RESIDENCE_DETAIL>
+                      </RESIDENCE>
+                      <RESIDENCE SequenceNumber="2">
+                        <ADDRESS>
+                          <AddressLineText>6000 Lakeview Ln</AddressLineText>
+                          <CityName>COSTA MESA</CityName>						  
+                          <PostalCode>92626</PostalCode>
+                          <StateCode>CA</StateCode>
+                        </ADDRESS>                        
+                        <RESIDENCE_DETAIL>
+                          <BorrowerResidencyDurationMonthsCount>8</BorrowerResidencyDurationMonthsCount>
+                          <BorrowerResidencyDurationYearsCount>4</BorrowerResidencyDurationYearsCount>
+                          <BorrowerResidencyType>Prior</BorrowerResidencyType>
+                        </RESIDENCE_DETAIL>                        
+                      </RESIDENCE>
+                    </RESIDENCES>                    
+                  </BORROWER>
+                  <ROLE_DETAIL>
+                    <PartyRoleType>Borrower</PartyRoleType>                    
+                  </ROLE_DETAIL>
+                </ROLE>                
+              </ROLES>
+              <TAXPAYER_IDENTIFIERS>
+                <TAXPAYER_IDENTIFIER>
+                  <TaxpayerIdentifierType>SocialSecurityNumber</TaxpayerIdentifierType>
+                  <TaxpayerIdentifierValue>000000008</TaxpayerIdentifierValue>
+                </TAXPAYER_IDENTIFIER>
+              </TAXPAYER_IDENTIFIERS>
+            </PARTY>
+            <PARTY SequenceNumber="2" p2:label="Party2"> <!--COBORROWER-->
+              <INDIVIDUAL>
+                <NAME>
+                  <FirstName>First</FirstName>
+                  <LastName>Last</LastName>
+                  <MiddleName>M</MiddleName>
+                  <SuffixName></SuffixName>
+                </NAME>
+              </INDIVIDUAL>
+              <ROLES>
+                <ROLE SequenceNumber="1">
+                  <BORROWER p2:label="Borrower2">
+                    <BORROWER_DETAIL>
+                      <BorrowerBirthDate>1970-12-24</BorrowerBirthDate>							 						  
+                      <BorrowerClassificationType>Secondary</BorrowerClassificationType>
+                      <DependentCount>3</DependentCount> 
+                    </BORROWER_DETAIL>
+                    <RESIDENCES>
+                      <RESIDENCE SequenceNumber="1">
+                      <ADDRESS>
+                        <AddressLineText>300 Bristol St</AddressLineText>
+                        <CityName>COSTA MESA</CityName>								  
+                        <PostalCode>92626</PostalCode>
+                        <StateCode>CA</StateCode>
+                      </ADDRESS>                        
+                      <RESIDENCE_DETAIL>
+                        <BorrowerResidencyBasisType>Own</BorrowerResidencyBasisType>
+                        <BorrowerResidencyDurationMonthsCount>3</BorrowerResidencyDurationMonthsCount>
+                        <BorrowerResidencyDurationYearsCount>15</BorrowerResidencyDurationYearsCount>
+                        <BorrowerResidencyType>Current</BorrowerResidencyType>
+                      </RESIDENCE_DETAIL>
+                      </RESIDENCE>
+                    </RESIDENCES>
+                  </BORROWER>
+                  <ROLE_DETAIL>
+                    <PartyRoleType>Borrower</PartyRoleType> <!-- There is no enumeration for coborrower -->						
+                  </ROLE_DETAIL>
+                </ROLE>
+              </ROLES>
+              <TAXPAYER_IDENTIFIERS>
+                <TAXPAYER_IDENTIFIER>
+                  <TaxpayerIdentifierType>SocialSecurityNumber</TaxpayerIdentifierType>
+                  <TaxpayerIdentifierValue>000000009</TaxpayerIdentifierValue>
+                </TAXPAYER_IDENTIFIER>
+              </TAXPAYER_IDENTIFIERS>
+            </PARTY>			
+            <PARTY SequenceNumber="3" p2:label="Party3">
+              <LEGAL_ENTITY>                
+                <LEGAL_ENTITY_DETAIL>
+                  <FullName>Name of your system</FullName>
+                  <LegalEntityType>Corporation</LegalEntityType>                              
+                </LEGAL_ENTITY_DETAIL>
+              </LEGAL_ENTITY>              
+              <ROLES>
+                <ROLE>
+                  <SUBMITTING_PARTY>
+                    <SubmittingPartyTransactionIdentifier>ThisValueWillBeEchoedBack</SubmittingPartyTransactionIdentifier> 
+                  </SUBMITTING_PARTY>
+                  <ROLE_DETAIL>
+                    <PartyRoleType>SubmittingParty</PartyRoleType>                    
+                  </ROLE_DETAIL>
+                </ROLE>
+              </ROLES>
+            </PARTY>
+          </PARTIES>
+          <SERVICES>
+            <SERVICE SequenceNumber="1" p2:label="Service1">
+				<CREDIT>
+					<CREDIT_REQUEST>
+						<CREDIT_INQUIRIES>
+							<CREDIT_INQUIRY>
+								<CREDIT_REPOSITORIES>
+									<CREDIT_REPOSITORY>
+										<CreditRepositorySourceType>Experian</CreditRepositorySourceType>
+									</CREDIT_REPOSITORY>
+									<CREDIT_REPOSITORY>
+										<CreditRepositorySourceType>Equifax</CreditRepositorySourceType>
+									</CREDIT_REPOSITORY>
+									<CREDIT_REPOSITORY>
+										<CreditRepositorySourceType>TransUnion</CreditRepositorySourceType>
+									</CREDIT_REPOSITORY>
+								</CREDIT_REPOSITORIES>
+							</CREDIT_INQUIRY>
+						</CREDIT_INQUIRIES>
+						<CREDIT_REQUEST_DATAS>
+							<CREDIT_REQUEST_DATA>
+								<CREDIT_REQUEST_DATA_DETAIL>
+									<CreditReportIdentifier></CreditReportIdentifier> <!-- Used for reissues/status queries -->
+									<CreditReportRequestActionType>Submit</CreditReportRequestActionType>
+								</CREDIT_REQUEST_DATA_DETAIL>
+							</CREDIT_REQUEST_DATA>
+						</CREDIT_REQUEST_DATAS>
+					</CREDIT_REQUEST>
+				</CREDIT>
+            <!--  <SERVICE_PAYMENTS>
+                <SERVICE_PAYMENT>
+                  <ADDRESS>
+                    <AddressLineText>300 Bristol St</AddressLineText>
+                    <CityName>COSTA MESA</CityName>
+                    <PostalCode>92626</PostalCode>
+                    <StateCode>CA</StateCode>
+                  </ADDRESS>
+                  <NAME>
+                    <FirstName>A</FirstName>
+                    <LastName>TESTCASE</LastName>
+                    <MiddleName>JEREMY</MiddleName>
+                  </NAME>
+                  <SERVICE_PAYMENT_DETAIL>
+                    <ServicePaymentAccountIdentifier>credit card number</ServicePaymentAccountIdentifier>
+                    <ServicePaymentCreditAccountExpirationDate>2025-12</ServicePaymentCreditAccountExpirationDate>
+                    <ServicePaymentSecondaryCreditAccountIdentifier>CCV number</ServicePaymentSecondaryCreditAccountIdentifier>
+                  </SERVICE_PAYMENT_DETAIL>
+                </SERVICE_PAYMENT> 
+              </SERVICE_PAYMENTS> -->
+              <SERVICE_PRODUCT>
+                <SERVICE_PRODUCT_REQUEST>
+                  <SERVICE_PRODUCT_DETAIL>
+                    <ServiceProductDescription>CreditOrder</ServiceProductDescription>
+                    <ServiceProductIdentifier>ThisValueWillBeEchoedBack</ServiceProductIdentifier>
+                    <EXTENSION>
+                      <MISMO/>
+                      <OTHER>                        
+                          <p3:PreferredResponseFormatType>Html</p3:PreferredResponseFormatType>                        
+                      </OTHER>
+                    </EXTENSION>
+                  </SERVICE_PRODUCT_DETAIL>
+                </SERVICE_PRODUCT_REQUEST>
+              </SERVICE_PRODUCT>        
+            </SERVICE>
+          </SERVICES>
+		</DEAL>
+      </DEALS>
+    </DEAL_SET>
+  </DEAL_SETS>
+</MESSAGE>

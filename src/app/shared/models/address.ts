@@ -1,9 +1,9 @@
 export interface Address {
   id: string;
-  zipCode: number;
   city: string;
-  state: string;
   county?: string;
   country?: string;
+  postalCode: number;
+  state: string;
   type?: string; // home, apartment
 }

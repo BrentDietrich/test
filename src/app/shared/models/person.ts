@@ -8,9 +8,10 @@ export interface Person {
   lastName: string;
   suffix?: string;
   birthDate?: Date;
-  email?: string;
-  phone?: string;
-  phone2?: string;
+  emailPrimary?: string;
+  emailSecondary?: string;
+  phonePrimary?: string;
+  phoneSecondary?: string;
   cellPhone?: string;
   faxNumber?: string;
   address?: Address;

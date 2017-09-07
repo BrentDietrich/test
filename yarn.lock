@@ -8,6 +8,12 @@
   dependencies:
     tslib "^1.7.1"
 
+"@angular/cdk@2.0.0-beta.8":
+  version "2.0.0-beta.8"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-2.0.0-beta.8.tgz#71961c851dfbeb19e085e898bf5e4461408f8b57"
+  dependencies:
+    tslib "^1.7.1"
+
 "@angular/cli@1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-1.1.1.tgz#ee5cf7637ad859c08e8a5e7a7f2161d0e74ce7a5"
@@ -152,33 +158,33 @@
   dependencies:
     tsickle "^0.21.0"
 
-"@covalent/core@1.0.0-beta.5":
-  version "1.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@covalent/core/-/core-1.0.0-beta.5.tgz#f0f6092bfdefe5dc09555fe64993a1fd625f3303"
+"@covalent/core@1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@covalent/core/-/core-1.0.0-beta.6.tgz#c0d036f7e12233c815fd274468592bcda28845cb"
 
 "@covalent/data@0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@covalent/data/-/data-0.7.0.tgz#a9722bf649894ce98360ea224a6868c9ad20d710"
 
-"@covalent/dynamic-forms@1.0.0-beta.5":
-  version "1.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@covalent/dynamic-forms/-/dynamic-forms-1.0.0-beta.5.tgz#1319c96417908314ea7a3ccbbf51f910112ba6da"
+"@covalent/dynamic-forms@1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@covalent/dynamic-forms/-/dynamic-forms-1.0.0-beta.6.tgz#1dee8d2127f6037404ae9e5b6225fc175a5ad78b"
   dependencies:
-    "@covalent/core" "1.0.0-beta.5"
+    "@covalent/core" "1.0.0-beta.6"
 
-"@covalent/highlight@1.0.0-beta.5":
-  version "1.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@covalent/highlight/-/highlight-1.0.0-beta.5.tgz#ab6f66818a957efa459938e34020566d0441fb1a"
+"@covalent/highlight@1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@covalent/highlight/-/highlight-1.0.0-beta.6.tgz#5d305a96d0c85c07e4f0fea81bb952955ab8eb23"
   dependencies:
     highlight.js "9.11.0"
 
-"@covalent/http@1.0.0-beta.5":
-  version "1.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@covalent/http/-/http-1.0.0-beta.5.tgz#ab7328d5e948dd087b6bcb90ae5161b59c8de99c"
+"@covalent/http@1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@covalent/http/-/http-1.0.0-beta.6.tgz#968add652c1c3caf843b39f2118d1910f7687395"
 
-"@covalent/markdown@1.0.0-beta.5":
-  version "1.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@covalent/markdown/-/markdown-1.0.0-beta.5.tgz#2ed23f26a8041310e4b94f9f1849d96227d40fd0"
+"@covalent/markdown@1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@covalent/markdown/-/markdown-1.0.0-beta.6.tgz#df660c4d7fd2626f259ceb30cd74864b5e3e8d39"
   dependencies:
     showdown "1.6.4"
 

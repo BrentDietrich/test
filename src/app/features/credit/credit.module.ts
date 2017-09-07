@@ -7,10 +7,14 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { CovalentLoadingModule, CovalentDialogsModule, CovalentMediaModule, CovalentLayoutModule,
          CovalentSearchModule, CovalentCommonModule } from '@covalent/core';
-import { MaterialLoadModule } from '../../shared/material.module';
+// import { TdDynamicType, ITdDynamicElementConfig,
+  // TdDynamicElement, ITdDynamicElementValidator, TdDynamicFormsComponent } from '@covalent/dynamic-forms';
+import { CovalentDynamicFormsModule } from '@covalent/dynamic-forms';
 
-import { CreditInquiryComponent } from './credit-inquiry/credit-inquiry.component';
+import { MaterialLoadModule } from '../../shared/material.module';
+import { CreditComponent } from './credit.component';
 import { CreditReportsComponent } from './credit-reports/credit-reports.component';
+import { CreditInquiryComponent } from './credit-inquiry/credit-inquiry.component';
 import { creditRoutes } from './credit-routes';
 import { CreditSettingsComponent } from './credit-settings/credit-settings.component';
 import { reducers } from './reducers';
@@ -30,6 +34,7 @@ import { ReportsEffects } from './effects/reports';
     CovalentLayoutModule,
     CovalentSearchModule,
     CovalentCommonModule,
+    CovalentDynamicFormsModule,
     /** custom */
     StoreModule.forFeature('creditReports', reducers ),
     EffectsModule.forFeature([CollectionEffects]),
@@ -37,6 +42,7 @@ import { ReportsEffects } from './effects/reports';
     MaterialLoadModule,
   ],
   declarations: [
+    CreditComponent,
     CreditInquiryComponent,
     CreditReportsComponent,
     CreditSettingsComponent
