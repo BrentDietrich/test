@@ -12,7 +12,7 @@ const routes: Routes = [{
       path: '',
       component: CreditReportsComponent,
     }, {
-      path: 'new',
+      path: 'inquiry',
       component: CreditInquiryComponent,
     // }, {
     //   path: ':id/edit',
