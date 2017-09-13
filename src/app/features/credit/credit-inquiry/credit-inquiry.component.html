@@ -1,34 +1,153 @@
 <!--<td-layout-nav logo="assets:covalent">-->
 <td-layout-nav>
-  <td-layout-card-over cardTitle="New Credit Inquiry" cardSubtitle="fill form to {{action}} user">
-    <ng-template mdTabLabel>Demo</ng-template>
-    <td-dynamic-forms [elements]="textElements">
-    </td-dynamic-forms>
-    <ng-template mdTabLabel>Demo</ng-template>
-    <td-dynamic-forms [elements]="booleanElements">
-    </td-dynamic-forms>
-    <!--<ng-template tdLoading="user.form">
+  <td-layout-card-over cardTitle="New Credit Inquiry" cardSubtitle="fill in form below">
+    <ng-template tdLoading="inquiry">
       <md-card-content class="push-bottom-none">
+          <!--BUYER-->
         <form #userForm="ngForm">
+          <!--isPrimaryBorrower-->
+          <!--firstName-->
+          <md-toolbar color="default">
+              <span>Borrower</span>
+              <span class="borrower-title-spacer"></span>
+              <md-slide-toggle [(ngModel)]="isPrimaryBorrower" name="isPrimaryBorrower">Primary Buyer?</md-slide-toggle>
+              <!--<md-icon class="example-icon">verified_user</md-icon>-->
+          </md-toolbar>
           <div layout="row">
             <md-input-container flex> 
               <input mdInput
-                      #displayNameElement
-                      #displayNameControl="ngModel"
+                      #firstNameElement
+                      #firstNameControl="ngModel"
                       type="text" 
-                      placeholder="Display Name" 
-                      [(ngModel)]="displayName" 
-                      name="displayName" 
+                      placeholder="First Name" 
+                      [(ngModel)]="firstName" 
+                      name="firstName" 
                       maxlength="20" 
                       required>
               <md-hint align="start">
-                <span [hidden]="displayNameControl.pristine" class="tc-red-600">
-                  <span [hidden]="!displayNameControl.hasError('required')">Required</span>
+                <span [hidden]="firstNameControl.pristine" class="tc-red-600">
+                  <span [hidden]="!firstNameControl.hasError('required')">Required</span>
                 </span>
               </md-hint>
-              <md-hint align="end">{{displayNameElement.value.length}} / 20</md-hint>
+              <md-hint align="end">{{firstNameElement.value.length}} / 20</md-hint>
             </md-input-container>
           </div>
+          <!--middleName-->
+          <div layout="row">
+            <md-input-container flex> 
+              <input mdInput
+                      #middleNameElement
+                      #middleNameControl="ngModel"
+                      type="text" 
+                      placeholder="Middle Name" 
+                      [(ngModel)]="middleName" 
+                      name="middleName" 
+                      maxlength="20" 
+                      required>
+              <md-hint align="start">
+                <span [hidden]="middleNameControl.pristine" class="tc-red-600">
+                  <span [hidden]="!middleNameControl.hasError('required')">Required</span>
+                </span>
+              </md-hint>
+              <md-hint align="end">{{middleNameElement.value.length}} / 20</md-hint>
+            </md-input-container>
+          </div>
+          <!--lastName-->
+          <div layout="row">
+            <md-input-container flex> 
+              <input mdInput
+                      #lastNameElement
+                      #lastNameControl="ngModel"
+                      type="text" 
+                      placeholder="Last Name" 
+                      [(ngModel)]="lastName" 
+                      name="lastName" 
+                      maxlength="20" 
+                      required>
+              <md-hint align="start">
+                <span [hidden]="lastNameControl.pristine" class="tc-red-600">
+                  <span [hidden]="!lastNameControl.hasError('required')">Required</span>
+                </span>
+              </md-hint>
+              <md-hint align="end">{{lastNameElement.value.length}} / 20</md-hint>
+            </md-input-container>
+          </div>
+          <!--suffix-->
+          <!--ssn-->
+          <!--birthDate-->
+          <!--currentAddress-->
+          <!--previousAddress-->
+          <!--END BUYER-->
+
+          <!--CO-BUYER-->
+          <!--isPrimaryBorrower-->
+          <!--firstName-->
+          <div layout="row">
+            <md-input-container flex> 
+              <input mdInput
+                      #firstNameElement
+                      #firstNameControl="ngModel"
+                      type="text" 
+                      placeholder="First Name" 
+                      [(ngModel)]="firstName" 
+                      name="firstName" 
+                      maxlength="20" 
+                      required>
+              <md-hint align="start">
+                <span [hidden]="firstNameControl.pristine" class="tc-red-600">
+                  <span [hidden]="!firstNameControl.hasError('required')">Required</span>
+                </span>
+              </md-hint>
+              <md-hint align="end">{{firstNameElement.value.length}} / 20</md-hint>
+            </md-input-container>
+          </div>
+          <!--middleName-->
+          <div layout="row">
+            <md-input-container flex> 
+              <input mdInput
+                      #middleNameElement
+                      #middleNameControl="ngModel"
+                      type="text" 
+                      placeholder="Middle Name" 
+                      [(ngModel)]="middleName" 
+                      name="middleName" 
+                      maxlength="20" 
+                      required>
+              <md-hint align="start">
+                <span [hidden]="middleNameControl.pristine" class="tc-red-600">
+                  <span [hidden]="!middleNameControl.hasError('required')">Required</span>
+                </span>
+              </md-hint>
+              <md-hint align="end">{{middleNameElement.value.length}} / 20</md-hint>
+            </md-input-container>
+          </div>
+          <!--lastName-->
+          <div layout="row">
+            <md-input-container flex> 
+              <input mdInput
+                      #lastNameElement
+                      #lastNameControl="ngModel"
+                      type="text" 
+                      placeholder="Last Name" 
+                      [(ngModel)]="lastName" 
+                      name="lastName" 
+                      maxlength="20" 
+                      required>
+              <md-hint align="start">
+                <span [hidden]="lastNameControl.pristine" class="tc-red-600">
+                  <span [hidden]="!lastNameControl.hasError('required')">Required</span>
+                </span>
+              </md-hint>
+              <md-hint align="end">{{lastNameElement.value.length}} / 20</md-hint>
+            </md-input-container>
+          </div>
+            <!--suffix-->
+            <!--ssn-->
+            <!--birthDate-->
+            <!--currentAddress-->
+            <!--previousAddress-->
+          <!--END CO-BUYER-->
+
           <div layout="row" class="push-top">
             <md-input-container flex> 
               <input mdInput
@@ -60,6 +179,27 @@
         <button md-button [disabled]="!userForm.form.valid" color="primary" (click)="save()">SAVE</button>
         <button md-button (click)="goBack()">CANCEL</button>
       </md-card-actions>
-    </ng-template>-->
+    </ng-template>
   </td-layout-card-over>
 </td-layout-nav>
+
+
+          <!--<div layout="row">
+            <md-input-container flex> 
+              <input mdInput
+                      #textBaseElement
+                      #textBaseControl="ngModel"
+                      type="text" 
+                      placeholder="Display Name" 
+                      [(ngModel)]="textBase" 
+                      name="textBase" 
+                      maxlength="20" 
+                      required>
+              <md-hint align="start">
+                <span [hidden]="textBaseControl.pristine" class="tc-red-600">
+                  <span [hidden]="!textBaseControl.hasError('required')">Required</span>
+                </span>
+              </md-hint>
+              <md-hint align="end">{{textBaseElement.value.length}} / 20</md-hint>
+            </md-input-container>
+          </div>-->

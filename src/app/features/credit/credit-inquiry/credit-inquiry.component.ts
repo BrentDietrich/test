@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { TdDynamicType, ITdDynamicElementConfig,
   TdDynamicElement, TdDynamicFormsComponent } from '@covalent/dynamic-forms';
 
+import { Inquiry } from '../models/inquiry';
 
 @Component({
   selector: 'ax-credit-inquiry',
@@ -14,51 +15,10 @@ export class CreditInquiryComponent implements OnInit {
 
   id: string;
   action: string;
-  
-  textElements: ITdDynamicElementConfig[] = [{
-    name: 'isPrimaryBorrower',
-    label: 'Primary Borrower?',
-    type: TdDynamicType.Boolean,
-    default: false,
-  }, {
-    name: 'input',
-    type: TdDynamicElement.Input,
-    required: false,
-  }, {
-    name: 'required-input',
-    label: 'Input Label',
-    type: TdDynamicElement.Input,
-    required: true,
-  }, {
-    name: 'textarea',
-    type: TdDynamicElement.Textarea,
-    required: false,
-  }, {
-    name: 'text',
-    type: TdDynamicType.Text,
-    required: false,
-    default: 'Default',
-  }, {
-    name: 'required-password',
-    label: 'Password Label',
-    type: TdDynamicElement.Password,
-    required: true,
-  }];
-  booleanElements: ITdDynamicElementConfig[] = [{
-    name: 'boolean',
-    label: 'Boolean Label',
-    type: TdDynamicType.Boolean,
-    default: false,
-  }, {
-    name: 'slide-toggle',
-    type: TdDynamicElement.SlideToggle,
-    default: true,
-  }, {
-    name: 'checkbox',
-    type: TdDynamicElement.Checkbox,
-  }];
+  inquiry: Inquiry; 
+
   constructor(private _router: Router,
-              private _route: ActivatedRoute ) { }
+              private _route: ActivatedRoute ) {}
 
   ngOnInit(): void {
     this._route.url.subscribe((url: any) => {
@@ -71,6 +31,10 @@ export class CreditInquiryComponent implements OnInit {
         // this.load();
       }
     });
+  }
+
+  goBack(): void {
+    this._router.navigate(['/users']);
   }
 
 }
