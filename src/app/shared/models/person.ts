@@ -4,7 +4,7 @@ export interface Person {
   id: string;
   type: string; // person category type
   firstName: string;
-  middleInitial?: string;
+  middleName?: string;
   lastName: string;
   suffix?: string;
   birthDate?: Date;
