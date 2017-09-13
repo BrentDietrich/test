@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._router.navigate(['/credit']);
+    this._router.navigate(['/credit/inquiry']);
   }
 
 }
